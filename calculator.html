@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Level 2 Calculator</title>
+  <link rel="stylesheet" href="calculator.css" />
+</head>
+<body>
+  <div class="app">
+
+    <header class="top-bar">
+      <h1>Calculator • Level 2</h1>
+
+      <div class="theme-toggle">
+        <span>🌙</span>
+        <label class="switch">
+          <input type="checkbox" id="themeCheckbox">
+          <span class="slider"></span>
+        </label>
+        <span>☀️</span>
+      </div>
+    </header>
+
+    <main class="layout">
+      <!-- MAIN CALCULATOR -->
+      <section class="calculator">
+        <div class="screen">
+          <div id="expression" class="expression">0</div>
+          <div id="result" class="result">0</div>
+        </div>
+
+        <div class="buttons">
+          <button class="btn btn-func" data-action="clear">AC</button>
+          <button class="btn btn-func" data-action="del">DEL</button>
+          <button class="btn btn-op" data-value="%">%</button>
+          <button class="btn btn-op" data-value="/">÷</button>
+
+          <button class="btn btn-num" data-value="7">7</button>
+          <button class="btn btn-num" data-value="8">8</button>
+          <button class="btn btn-num" data-value="9">9</button>
+          <button class="btn btn-op" data-value="*">×</button>
+
+          <button class="btn btn-num" data-value="4">4</button>
+          <button class="btn btn-num" data-value="5">5</button>
+          <button class="btn btn-num" data-value="6">6</button>
+          <button class="btn btn-op" data-value="-">−</button>
+
+          <button class="btn btn-num" data-value="1">1</button>
+          <button class="btn btn-num" data-value="2">2</button>
+          <button class="btn btn-num" data-value="3">3</button>
+          <button class="btn btn-op" data-value="+">+</button>
+
+          <button class="btn btn-num" data-value="0">0</button>
+          <button class="btn btn-num" data-value="00">00</button>
+          <button class="btn btn-num" data-value=".">.</button>
+          <button class="btn btn-eq" data-action="equals">=</button>
+        </div>
+      </section>
+
+      <!-- HISTORY PANEL -->
+      <aside class="history">
+        <div class="history-header">
+          <h2>History</h2>
+          <button class="btn-small" id="clearHistoryBtn">Clear</button>
+        </div>
+        <ul id="historyList">
+          <li class="empty">No history yet</li>
+        </ul>
+      </aside>
+    </main>
+  </div>
+
+  <script src="calculator.js"></script>
+</body>
+</html>
